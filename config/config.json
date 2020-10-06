@@ -1,3 +1,5 @@
 {
-	"logfile": "/log/response.log"
+	"logfile": "log/response.log",
+	"timeout": 0.5,
+	"interval": 3
 }

@@ -1,7 +1,8 @@
 [
 	{
-		"url": "https://reaktorfall-app.herokuapp.com/",
-		"status": "200",
-		"content": "Packages"
+		"url": "https://google.fi",
+		"code": 200,
+		"content-type": "text/html",
+		"content": ""
 	}
 ]

@@ -16,13 +16,8 @@ def loop(urls_json, config_json, logger):
 	while True:
 		for url_dict in urls_json:
 			request(url_dict, timeout, logger)
-		stopwatch = interval
-		while True:
-			if stopwatch > 0:
-				time.sleep(1)
-				stopwatch -= 1
-			else:
-				break
+		for stopwatch in range(interval):
+			time.sleep(1)
 
 def main():
 	try:
@@ -37,5 +32,5 @@ def main():
 	logger = Logger(config_json['logfile'])
 	loop(urls_json, config_json, logger)
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+	main()

@@ -28,9 +28,9 @@ The main configurations are set in config.json file.
 	"interval": 3
 }
 ```
-`logfile` determines the file where logs are written.  
-`timeout` determines general instruction how long each request will wait for response before logging timeout exception.  
-`interval` determines the time spent in "waiting" between requests.  
+- `logfile` determines the file where logs are written.  
+- `timeout` determines general instruction how long each request will wait for response before logging timeout exception.  
+- `interval` determines the time spent in "waiting" between requests.  
 
 The program sends requests and compares responses according to the information found in `urls.json` file.
 ```
@@ -43,11 +43,12 @@ The program sends requests and compares responses according to the information f
 	}
 ]
 ```
-`url` determines where the requests are sent to.  
-`code` determines what HTTP status code is expected in response.  
-`content-type` determines expected type of content sent from server.  
-`content` determines a string that will be searched from the response body.  
-<strong> ! </strong> All of the fields have to be present in the object, but in `content-type` and `content` can contain empty string.<strong> ! </strong>
+- `url` determines where the requests are sent to.  
+- `code` determines what HTTP status code is expected in response.  
+- `content-type` determines expected type of content sent from server.  
+- `content` determines a string that will be searched from the response body.  
+
+<strong> ! </strong> All of the fields have to be present in the object, but `content-type` and `content` can contain empty string.<strong> ! </strong>
 #### Logs
 By default the logs are written into `response.log` file.
 ```
@@ -58,13 +59,14 @@ Code:         PASS
 Content-Type: PASS
 Content:      PASS
 ```
-`Sent` contains the timestamp when the request was logged. 
-`URL` contains the information where the request was sent to.  
-`Response` contains the time it took to receive a response from server.  
-`Code` determines if the received HTTP status code matches the code set in the `urls.json` object.  
-`Content-Type` determines if the received content-type matches the content-type set in the `urls.json` object.  
-`Content` determines if the response body includes the string set in the `urls.json` object.  
-<strong> ! </strong> If ie. https://google.fi would sent us HTTP status code of 404 when we are expecting it to be 200, the log would contain `Code:  FAIL`<strong> ! </strong>  
+- `Sent` contains the timestamp when the request was logged. 
+- `URL` contains the information where the request was sent to.  
+- `Response` contains the time it took to receive a response from server.  
+- `Code` determines if the received HTTP status code matches the code set in the `urls.json` object.  
+- `Content-Type` determines if the received content-type matches the content-type set in the `urls.json` object.  
+- `Content` determines if the response body includes the string set in the `urls.json` object.  
+
+<strong> ! </strong> If the response value does not match with the expected one, it is logged as `FAIL` instead of `PASS`<strong> ! </strong>  
 
 In case the program encounters error while sending a request, the request is logged as an exception.
 ```

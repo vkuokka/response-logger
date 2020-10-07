@@ -16,8 +16,7 @@ def loop(urls_json, config_json, logger):
 	while True:
 		for url_dict in urls_json:
 			request(url_dict, timeout, logger)
-		for stopwatch in range(interval):
-			time.sleep(1)
+		time.sleep(interval)
 
 def main():
 	try:

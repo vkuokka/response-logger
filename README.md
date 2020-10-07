@@ -1,6 +1,13 @@
 # response-logger
 A program that monitors web sites and reports their availability.
 
+## Main functions
+1.	Reads a list of web pages (HTTP URLs) and corresponding page content requirements from external configuration.
+2.	Periodically makes an HTTP request to each page.
+3.	Verifies that the page content received from the server matches the requirements in the configuration.
+4.	Measures the time it took for the web server to complete the whole request.
+5.	Writes a log that contains the progress of the periodic checks.
+
 ## Getting started
 
 #### Prerequisites

@@ -39,6 +39,8 @@ The main configurations are set in config.json file.
 - `timeout` determines general instruction how long each request will wait for response before logging timeout exception.  
 - `interval` determines the time spent in "waiting" between requests.  
 
+<strong> ! </strong> Configuration has to be done properly and with correct values for program to work.<strong> ! </strong>
+
 The program sends requests and compares responses according to the information found in `urls.json` file.
 ```
 [

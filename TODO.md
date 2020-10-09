@@ -4,3 +4,4 @@
 - [ ] There should be option to set interval value as hours/minutes/seconds instead of just seconds. 
 - [ ] Automated tests.
 - [x] Improve logger printing.
+- [ ] Multithreading the requests.

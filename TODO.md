@@ -5,3 +5,4 @@
 - [ ] Automated tests.
 - [x] Improve logger printing.
 - [ ] Multithreading the requests.
+- [ ] Check if configurations are in correct form and mandatory setting are set for proper error handling.

@@ -26,9 +26,9 @@ def main():
 		config_json = json.loads(config.read())
 		urls.close()
 		config.close()
+		logger = Logger(config_json['logfile'])
 	except IOError:
 		raise SystemExit('Problems with configuration.')
-	logger = Logger(config_json['logfile'])
 	loop(urls_json, config_json, logger)
 
 if __name__ == '__main__':
